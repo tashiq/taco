@@ -1,0 +1,54 @@
+.home-goal {
+  padding-bottom: 50vh;
+  overflow: hidden;
+}
+.home-goal-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 2vw;
+  margin: 0;
+}
+.home-goal-title {
+  font-size: 5.3vw;
+  grid-column: 1 / span 12;
+  font-weight: 400;
+}
+.home-goal-title-line {
+  line-height: 8vw;
+  font-weight: 400;
+}
+
+.home-goal-description {
+  font-size: 1.1rem;
+  grid-column: 7 / span 5;
+}
+
+.home-goal-video-container {
+  width: calc(161px * 3.5);
+  height: calc(110px * 3.5);
+}
+.home-goal-frame {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background: url("/ipad-frame.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: transform 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.home-goal-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  padding: 0.5rem;
+  border-radius: 5%;
+  width: 100%;
+  height: 100%;
+  background-image: url("/frames/ezgif-frame-001.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: transform 0.3s ease;
+}

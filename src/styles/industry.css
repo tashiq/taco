@@ -1,0 +1,43 @@
+.text-animation {
+  display: inline-block;
+  position: relative;
+  color: transparent;
+  text-transform: uppercase;
+  font-family: "share tech mono", monospace;
+}
+
+.text-animation:before {
+  content: "";
+  color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: #0e182d;
+  width: 0;
+  height: 1.2em;
+  transform: translate(-50%, -55%);
+}
+
+.text-animation.state-1:before {
+  width: 1px;
+}
+
+.text-animation.state-2:before {
+  width: 0.9em;
+}
+
+.text-animation.state-3 {
+  color: black;
+}
+
+.text-animation.state-3:before {
+  width: 0;
+}
+
+.business-container {
+  background-image: url("/qoute_bg.png");
+  background-color: black;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+}

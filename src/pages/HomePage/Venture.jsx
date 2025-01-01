@@ -1,0 +1,189 @@
+import VentureCard from "./VentureCard";
+import "../../styles/index.css";
+import "../../styles/venture.css";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect } from "react";
+
+gsap.registerPlugin(ScrollTrigger);
+const Venture = () => {
+  const cardData = [
+    {
+      subHeading: "One-stop industrial solutions",
+      heading: "Industrial Solutions",
+      img: "/ventures/Automobile Dealership.jpg",
+    },
+    {
+      subHeading: "Import • Export • Trade",
+      heading: "Fisheries",
+      img: "/ventures/Fisheries.jpg",
+    },
+    {
+      subHeading: "Connecting the Country",
+      heading: "Logistic Services",
+      img: "/ventures/Industrial Solutions.jpg",
+    },
+    {
+      subHeading: "New • Reconditioned • Pre-owned",
+      heading: "Automobile Dealerships",
+      img: "/ventures/Investment.jpg",
+    },
+    {
+      subHeading: "One-stop industrial solutions",
+      heading: "Real Estate",
+      img: "/ventures/Logistics Services.jpg",
+    },
+    {
+      subHeading: "Leading Power Generation with Excellence",
+      heading: "Power & Energy",
+      img: "/ventures/Power & Energy.jpg",
+    },
+    {
+      subHeading: "One-stop industrial solutions",
+      heading: "Investment",
+      img: "/ventures/Real Estate.jpg",
+    },
+    {
+      subHeading: "Leading Power Generation with Excellence",
+      heading: "Software Solutions",
+      img: "/ventures/Software Solutions.jpg",
+    },
+  ];
+  useEffect(() => {
+    gsap.from(".letters", {
+      yPercent: 100,
+      stagger: 0.02,
+      duration: 1,
+      ease: "back.out",
+      scrollTrigger: {
+        trigger: ".letters",
+        start: "top 80%",
+        end: "top top",
+        toggleActions: "play reverse play reverse",
+      },
+    });
+
+    gsap.from(".card0", {
+      x: 0,
+      y: 0,
+      scale: 0.8,
+      duration: 0.5,
+      scrollTrigger: {
+        trigger: ".card0",
+        start: "top 95%",
+        end: "bottom 5%",
+        toggleActions: "play reverse play reverse ",
+      },
+    });
+    gsap.from(".card1", {
+      x: 0,
+      y: 0,
+      scale: 0.8,
+      duration: 0.5,
+      scrollTrigger: {
+        trigger: ".card1",
+        start: "top 95%",
+        end: "bottom 5%",
+        toggleActions: "play reverse play reverse ",
+      },
+    });
+    gsap.from(".card2", {
+      x: 0,
+      y: 0,
+      scale: 0.8,
+      duration: 0.5,
+      scrollTrigger: {
+        trigger: ".card2",
+        start: "top 95%",
+        end: "bottom 5%",
+        toggleActions: "play reverse play reverse ",
+      },
+    });
+    gsap.from(".card3", {
+      x: 0,
+      y: 0,
+      scale: 0.8,
+      duration: 0.5,
+      scrollTrigger: {
+        trigger: ".card3",
+        start: "top 95%",
+        end: "bottom 5%",
+        toggleActions: "play reverse play reverse ",
+      },
+    });
+    gsap.from(".card4", {
+      x: 0,
+      y: 0,
+      scale: 0.8,
+      duration: 0.5,
+      scrollTrigger: {
+        trigger: ".card4",
+        start: "top 95%",
+        end: "bottom 5%",
+        toggleActions: "play reverse play reverse ",
+      },
+    });
+    gsap.from(".card5", {
+      x: 0,
+      y: 0,
+      scale: 0.8,
+      duration: 0.5,
+      scrollTrigger: {
+        trigger: ".card5",
+        start: "top 95%",
+        end: "bottom 5%",
+        toggleActions: "play reverse play reverse ",
+      },
+    });
+    gsap.from(".card6", {
+      x: 0,
+      y: 0,
+      scale: 0.8,
+      duration: 0.5,
+      scrollTrigger: {
+        trigger: ".card6",
+        start: "top 95%",
+        end: "bottom 5%",
+        toggleActions: "play reverse play reverse ",
+      },
+    });
+    gsap.from(".card7", {
+      x: 0,
+      y: 0,
+      scale: 0.8,
+      duration: 0.5,
+      scrollTrigger: {
+        trigger: ".card7",
+        start: "top 95%",
+        end: "bottom 5%",
+        toggleActions: "play reverse play reverse ",
+      },
+    });
+  }, []);
+  return (
+    <div className="venture-container container">
+      <h1 className="venture-title title" id="venture-title">
+        <span className="letters">Industry</span>
+        <span className="letters" style={{ width: "20px" }}>
+          {" "}
+        </span>
+        <span className="letters">Edge</span>
+      </h1>
+      <div className="venture-card-container">
+        {cardData.map((item, index) => (
+          <VentureCard
+            key={index}
+            text={item.heading}
+            subtext={item.subHeading}
+            src={item.img}
+            cls={
+              index % 2 ? "right" + ` card${index}` : "left" + ` card${index}`
+            }
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default Venture;

@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Aeonik";
+  src: url("/fonts/Aeonik-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Aeonik";
+  src: url("/fonts/Aeonik-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Aeonik";
+  src: url("/fonts/aeoniktrial-light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "share tech mono";
+  src: url("/fonts/ShareTechMono-Regular.ttf") format("ttf");
+  font-weight: 300;
+  font-style: italic;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Aeonik", monospace;
+  font-weight: 300;
+}
+body {
+  overflow-x: hidden;
+}
+
+.container {
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+/* For Webkit Browsers (e.g., Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 5%;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding-top: 1rem;
+}
+.sub-heading {
+  font-size: 1.2vw;
+  text-transform: uppercase;
+  color: white;
+  margin-bottom: 1.6rem;
+}
+.heading {
+  font-size: 5vw;
+  color: white;
+  text-transform: uppercase;
+}
+
+.lost-container {
+  margin-top: 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.lost-container .lost-title {
+  font-size: 4.5vw;
+  font-weight: 500;
+}
+.lost-container .lost-sub {
+  font-size: 2vw;
+  font-weight: 400;
+}
+
+.lost-container .lost-graphics {
+  width: 21rem;
+  height: auto;
+}
+
+.lost-container .go-back {
+  height: 40px;
+  width: fit-content;
+  background-color: white;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  border: 0;
+  border-bottom: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 13px;
+  cursor: pointer;
+}
+
+.go-back .go-back-img {
+  height: 90%;
+  width: auto;
+  margin-right: 0.5rem;
+}

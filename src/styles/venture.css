@@ -1,0 +1,50 @@
+.venture-container {
+  padding-top: 2rem;
+  margin: 0;
+  margin-top: 2rem;
+  overflow: hidden;
+}
+.letters {
+  display: inline-block;
+  font-weight: 400;
+}
+.venture-card-container {
+  display: grid;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2.4vw;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+.left {
+  grid-column: 1 / span 6;
+}
+.right {
+  grid-column: 7 / span 6;
+}
+.venture-card {
+  /* background-color: aliceblue; */
+  /* box-shadow: 1px 2px 5px 1px gray; */
+  width: 550px;
+  height: 400px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.venture-card .venture-card-thumb {
+  width: 100%;
+  height: 85%;
+  border-radius: 12px;
+}
+.venture-card-content {
+  padding: 0.1rem 1rem;
+}
+.venture-card-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: left;
+}
+.venture-card-subtitle {
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: left;
+}
