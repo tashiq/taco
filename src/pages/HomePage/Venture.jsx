@@ -1,6 +1,5 @@
 import VentureCard from "./VentureCard";
 import "../../styles/index.css";
-import "../../styles/venture.css";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect } from "react";
@@ -11,41 +10,49 @@ const Venture = () => {
     {
       subHeading: "One-stop industrial solutions",
       heading: "Industrial Solutions",
-      img: "/ventures/Automobile Dealership.jpg",
+      location: "industries",
+      img: "/ventures/Industrial Solutions.jpg",
     },
     {
       subHeading: "Import • Export • Trade",
       heading: "Fisheries",
+      location: "fisheries",
       img: "/ventures/Fisheries.jpg",
     },
     {
       subHeading: "Connecting the Country",
       heading: "Logistic Services",
-      img: "/ventures/Industrial Solutions.jpg",
+      location: "logistic",
+      img: "/ventures/Logistics Services.jpg",
     },
     {
       subHeading: "New • Reconditioned • Pre-owned",
       heading: "Automobile Dealerships",
-      img: "/ventures/Investment.jpg",
+      location: "automobile",
+      img: "/ventures/Automobile Dealership.jpg",
     },
     {
       subHeading: "One-stop industrial solutions",
       heading: "Real Estate",
-      img: "/ventures/Logistics Services.jpg",
+      location: "real-estate",
+      img: "/ventures/Real Estate.jpg",
     },
     {
       subHeading: "Leading Power Generation with Excellence",
       heading: "Power & Energy",
+      location: "power",
       img: "/ventures/Power & Energy.jpg",
     },
     {
       subHeading: "One-stop industrial solutions",
       heading: "Investment",
-      img: "/ventures/Real Estate.jpg",
+      location: "investment",
+      img: "/ventures/Investment.jpg",
     },
     {
       subHeading: "Leading Power Generation with Excellence",
       heading: "Software Solutions",
+      location: "software",
       img: "/ventures/Software Solutions.jpg",
     },
   ];
@@ -57,8 +64,8 @@ const Venture = () => {
       ease: "back.out",
       scrollTrigger: {
         trigger: ".letters",
-        start: "top 80%",
-        end: "top top",
+        start: "top 88%",
+        end: "top 10%",
         toggleActions: "play reverse play reverse",
       },
     });
@@ -161,24 +168,29 @@ const Venture = () => {
     });
   }, []);
   return (
-    <div className="venture-container container">
+    <div className="venture-container  mt-8 overflow-hidden  container">
       <h1 className="venture-title title" id="venture-title">
-        <span className="letters">Industry</span>
-        <span className="letters" style={{ width: "20px" }}>
+        <span className="letters inline-block font-normal">Industry</span>
+        <span
+          className="letters inline-block font-normal"
+          style={{ width: "20px" }}
+        >
           {" "}
         </span>
-        <span className="letters">Edge</span>
+        <span className="letters inline-block font-normal">Edge</span>
       </h1>
-      <div className="venture-card-container">
+      <div className="flex flex-wrap justify-between gap-[2vw] box-border">
         {cardData.map((item, index) => (
           <VentureCard
             key={index}
+            location={item.location}
             text={item.heading}
             subtext={item.subHeading}
             src={item.img}
-            cls={
-              index % 2 ? "right" + ` card${index}` : "left" + ` card${index}`
-            }
+            cls={`w-1/2 card${index}`}
+            // cls={
+            //   index % 2 ? "right" + ` card${index}` : "left" + ` card${index}`
+            // }
           />
         ))}
       </div>

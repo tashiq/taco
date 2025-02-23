@@ -1,4 +1,3 @@
-import "../../styles/services.css";
 import "../../styles/index.css";
 import { useLocation } from "react-router";
 const Services = () => {
@@ -47,7 +46,7 @@ const Services = () => {
   }, [location]);
   return (
     <>
-      <div class="services">
+      <div class="relative -z-50 mx-auto my-0">
         {serviceData.map((item, index) => (
           <SingleService
             key={index}
@@ -70,40 +69,28 @@ import { useEffect } from "react";
 const SingleService = ({ serviceImg, backtext, text, id, desc, rev }) => {
   return (
     <>
-      <div class="service-item" id={id}>
-        <h2 className="service-title">{backtext}</h2>
-        <div className="service-content">
+      <div class="p-24 relative -z-10" id={id}>
+        <h2 className="sticky flex justify-center items-center top-[10px] h-[60vh] p-[10px] font-medium mb-[10px] text-[9rem] text-center text-[rgba(2,150,141,0.32)] -z-10">
+          {backtext}
+        </h2>
+        <div className="min-h-screen z-10 flex justify-between items-center gap-3">
           {rev == 0 ? (
             <>
-              <div className="service-img-content">
-                <img src={serviceImg} alt={text} />
+              <div className="w-[60%] overflow-hidden">
+                <img className="w-[90%]" src={serviceImg} alt={text} />
               </div>
-              <div className="service-text-content">
-                <h1>{text}</h1>
-                <div className="service-desc">
-                  {desc}
-                  {/* {desc.split(" ").map((word, index) => (
-                    <div className="service-word" key={index}>
-                      {word}
-                    </div>
-                  ))} */}
-                </div>
+              <div className="w-[40%]">
+                <h1 className="text-[32px] font-medium mb-3">{text}</h1>
+                <div>{desc}</div>
               </div>
             </>
           ) : (
             <>
-              <div className="service-text-content">
-                <h1>{text}</h1>
-                <div className="service-desc">
-                  {desc}
-                  {/* {desc.split(" ").map((word, index) => (
-                    <div className="service-word" key={index}>
-                      {word}
-                    </div>
-                  ))} */}
-                </div>
+              <div className="w-[60%] overflow-hidden">
+                <h1 className="text-[32px] font-medium mb-3">{text}</h1>
+                <div>{desc}</div>
               </div>
-              <div className="service-img-content">
+              <div className="w-[90%]">
                 <img src={serviceImg} alt="Shiper Liner Agency" />
               </div>
             </>

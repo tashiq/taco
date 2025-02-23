@@ -1,27 +1,28 @@
 import PropTypes from "prop-types";
 import "../../styles/index.css";
-import "../../styles/venture.css";
-import { useEffect, useRef, useState } from "react";
-import ShaderImageEffect from "./ShaderImage";
+import { useRef, useState } from "react";
 
-const VentureCard = ({ key, src, text, subtext, alt, cls }) => {
-  const [showText, setShowText] = useState("");
+const VentureCard = ({ key, src, text, subtext, cls, location }) => {
   const ref = useRef(null);
   const targetText = text;
-  const [index, setIndex] = useState(0);
-
   return (
-    <div className={`venture-card ${cls}`} key={key}>
-      <div className="venture-card-thumb">
-        <ShaderImageEffect imageSrc={src} width="100%" height="100%" />
-      </div>
-      <div className="venture-card-content">
-        <div className="venture-card-subtitle">{subtext}</div>
-        <div className="venture-card-title" ref={ref}>
-          {text}
+    <a
+      className={`w-[41vw]  overflow-hidden box-border ${cls} relative`}
+      key={key}
+      href={`/industry#${location}`}
+    >
+      <div>
+        <div className="w-full h-[320px] rounded-lg text-center overflow-hidden">
+          <img src={src} alt="Venture Image" srcset="" className="rounded-xl" />
+        </div>
+        <div className="pt-2 pl-4">
+          <div className="text-md font-normal">{subtext}</div>
+          <div className="text-2xl font-medium" ref={ref}>
+            {text}
+          </div>
         </div>
       </div>
-    </div>
+    </a>
   );
 };
 VentureCard.propTypes = {
@@ -31,6 +32,7 @@ VentureCard.propTypes = {
   subtext: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,
   cls: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
 };
 
 export default VentureCard;

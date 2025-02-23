@@ -15,21 +15,32 @@ const Card = forwardRef(
                 className="qoute-back-img"
               />
             </div>
-            <div className="flip-card-back flex flex-col h-full w-full p-2  rounded-lg">
-              <div className="w-full h-3/12 flex justify-center items-center mb-3">
-                <img
-                  src={avatar}
-                  alt="Avatar"
-                  className="avatar  rounded-full"
-                  style={{ width: 100, height: 100 }}
-                />
-              </div>
-              <div className="card-text">
-                <div className="author text-lg font-medium">{name}</div>
-                <div className="position text-base font-normal mb-2">
-                  {designation}
+            <div className="flip-card-back flex flex-col h-full w-full  rounded-lg ">
+              <div className="h-full rounded text-center">
+                <div className="card-img w-full flex justify-center items-center">
+                  <img
+                    src={avatar}
+                    alt="Avatar"
+                    className="avatar w-full h-[240px]"
+                  />
                 </div>
-                <div className="qoute">&quot;{backText}&quot;</div>
+
+                <div className="card-text p-3">
+                  <div className="text-2xl position font-normal capitalize">
+                    {designation}
+                  </div>
+                  <div className="author text-xl font-normal capitalize">
+                    {name}
+                  </div>
+                  <div className="qoute flex justify-center items-center h-[80px]">
+                    {backText}
+                  </div>
+                </div>
+
+                {/* <img
+                  src="/back.png"
+                  className="absolute top-0 left-0 w-full h-full -z-10 opacity-15"
+                /> */}
               </div>
             </div>
           </div>

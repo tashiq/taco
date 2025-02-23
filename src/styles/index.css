@@ -10,6 +10,13 @@
 }
 
 @font-face {
+  font-family: "Agdasima";
+  src: url("/fonts/Agdasima-regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "Aeonik";
   src: url("/fonts/Aeonik-Medium.woff") format("woff");
   font-weight: 500;
@@ -24,7 +31,7 @@
 
 @font-face {
   font-family: "share tech mono";
-  src: url("/fonts/ShareTechMono-Regular.ttf") format("ttf");
+  src: url("/fonts/ShareTechMono-Regular.ttf") format("truetype");
   font-weight: 300;
   font-style: italic;
 }
@@ -37,6 +44,11 @@
 }
 body {
   overflow-x: hidden;
+}
+
+.agdasima > *,
+.agdasima {
+  font-family: "Agdasima", sans-serif;
 }
 
 .container {

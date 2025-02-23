@@ -33,11 +33,3 @@
 .text-animation.state-3:before {
   width: 0;
 }
-
-.business-container {
-  background-image: url("/qoute_bg.png");
-  background-color: black;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-}

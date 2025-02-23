@@ -10,39 +10,40 @@ const Qoutes = () => {
   const qouteContainerRef = useRef();
   const qouteData = [
     {
-      name: "John Doe",
+      name: "mominur rahman",
+      designation: "Chairman",
+      avatar: "/momin.jpg",
+      qoute:
+        "Nothing beats  value and establishment. Hiking uphill the abyss of my career I've never seen hard work go unpaid.",
+    },
+
+    {
+      name: "Ishak Uddin Jashim",
+      designation: "Managing Director",
+      avatar: "/avatar.png",
+      qoute:
+        "Experience stands out most to me. The longest ladder to success is business, and its most crucial stepping stone is experience.",
+    },
+    {
+      name: "Hasnat Alam Mazumder",
       designation: "CEO",
       avatar: "/avatar.png",
       qoute:
-        "MM Seaways Ltd. is a trusted partner in logistics, freight forwarding, and global trade solutions, driving success across industries through innovation and excellence.",
+        "Let's be honest, the underlying faucets that control the entire flow of a business are connections. Socializing is a powerful asset.",
     },
     {
-      name: "Jane Doe",
+      name: "ahmed nayeem uddin",
       designation: "COO",
-      avatar: "/avatar.png",
+      avatar: "/nayeem.png",
       qoute:
-        "MM Seaways Ltd. is a trusted partner in logistics, freight forwarding, and global trade solutions, driving success across industries through innovation and excellence.",
+        "Luck sure is a mouthful. But my secret sauce has always been total obliteration of procrastination. Nothing beats that.",
     },
+
     {
-      name: "John Doe",
-      designation: "CEO",
-      avatar: "/avatar.png",
-      qoute:
-        "MM Seaways Ltd. is a trusted partner in logistics, freight forwarding, and global trade solutions, driving success across industries through innovation and excellence.",
-    },
-    {
-      name: "Jane Doe",
-      designation: "COO",
-      avatar: "/avatar.png",
-      qoute:
-        "MM Seaways Ltd. is a trusted partner in logistics, freight forwarding, and global trade solutions, driving success across industries through innovation and excellence.",
-    },
-    {
-      name: "John Doe",
-      designation: "CEO",
-      avatar: "/avatar.png",
-      qoute:
-        "MM Seaways Ltd. is a trusted partner in logistics, freight forwarding, and global trade solutions, driving success across industries through innovation and excellence.",
+      name: "Shahriar Rahman",
+      designation: "CTO",
+      avatar: "/inan.png",
+      qoute: "JUST A TECH GUY.",
     },
   ];
   useEffect(() => {
@@ -113,21 +114,9 @@ const Qoutes = () => {
   return (
     <>
       <section className="about-container">
-        <div className="about-banner-container">
-          <div className="about-banner">
-            <div className="about-content">
-              <h1 className="about-banner-title">About Us</h1>
-              <div className="about-banner-text">
-                Discover MM Seaways Ltd.: your trusted partner in logistics,
-                freight forwarding, and global trade solutions, driving success
-                across industries through innovation and excellence.
-              </div>
-            </div>
-          </div>
-        </div>
         <div className="qoute-container">
-          <h1 className="title text-7xl text-white font-medium ps-12">
-            Governing Body
+          <h1 className="text-7xl text-white font-normal ps-12 text-center pt-6">
+            Board of Directors
           </h1>
           <div className="qoute-card-container" ref={qouteContainerRef}>
             <div className="cards-container">

@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router";
+import { Route, Routes, useLocation } from "react-router";
 import Home from "./pages/HomePage/Home";
 import About from "./pages/AboutPage/About";
 import Career from "./pages/CareerPage/Career";
@@ -6,47 +6,40 @@ import Industry from "./pages/IndustryPage/Industry";
 import Services from "./pages/ServicePage/Services";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-
-import { useEffect, useRef } from "react";
-const RippleEffectCanvas = () => {
-  const canvasRef = useRef(null);
+import NotFound from "./pages/NotFound/NotFound";
+import Loading from "./pages/Loading/Loading";
+import { useEffect, useState } from "react";
+const App = () => {
+  const location = useLocation();
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    const canvas = canvasRef.current;
-    const handleMouseMove = (event) => {
-      const mouseX = event.clientX;
-      const mouseY = event.clientY;
-      console.log("Mouse X:", mouseX, "Mouse Y:", mouseY);
+    setLoading(true); // Start loading on route change
 
-      // You can now use mouseX and mouseY to create the ripple effect or other logic
-    };
-    canvas.addEventListener("mousemove", handleMouseMove);
+    const timer = setTimeout(() => {
+      setLoading(false); // Stop loading after a short delay
+    }, 500); // Adjust delay as needed
+
+    return () => clearTimeout(timer); // Cleanup on unmount
   }, []);
 
   return (
-    <canvas
-      ref={canvasRef}
-      className="h-screen w-full absolute top-0 left-0 pointer-events-none"
-    />
-  );
-};
-const App = () => {
-  return (
-    <>
-      <div className="relative">
-        <RippleEffectCanvas />
-        <Navbar />
+    <div className="relative">
+      <Navbar />
+      {loading ? (
+        <Loading /> // Show loading screen while changing routes
+      ) : (
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/career" element={<Career />} />
           <Route path="/industry" element={<Industry />} />
           <Route path="/services" element={<Services />} />
-          <Route path="*" element={<h1>404: Page Not Found</h1>} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
-        <Footer />
-      </div>
-    </>
+      )}
+      <Footer />
+    </div>
   );
 };
 

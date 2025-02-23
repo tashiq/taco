@@ -1,10 +1,8 @@
 import "../../styles/index.css";
-import "../../styles/home_services.css";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
 import PropTypes from "prop-types";
-import ShaderImageEffect from "./ShaderImage";
 gsap.registerPlugin(ScrollTrigger);
 const Services = () => {
   const cardData = [
@@ -12,22 +10,26 @@ const Services = () => {
       heading: "Feeder Service",
       src: "/ship.png",
       backSrc: "/bg_ship.png",
+      location: "/services#feederage",
     },
     {
       heading: "Shipping Liner Agency",
       src: "/container.png",
       backSrc: "/bg_container.png",
+      location: "/services#oceanline",
     },
 
     {
       heading: "Freight Forwarding",
       src: "/truck.png",
       backSrc: "/bg_truck.png",
+      location: "/services#freight",
     },
     {
       heading: "Customs Clearance & Logistics",
       src: "/clear.png",
       backSrc: "/bg_clear.png",
+      location: "/services#clear",
     },
   ];
   useEffect(() => {
@@ -37,9 +39,9 @@ const Services = () => {
       duration: 1,
       ease: "back.out",
       scrollTrigger: {
-        trigger: ".service-letters",
-        start: "top 80%",
-        end: "top top",
+        trigger: ".service-container",
+        start: "top 97%",
+        end: "top 0%",
         toggleActions: "play reverse play reverse",
       },
     });
@@ -93,29 +95,32 @@ const Services = () => {
     });
   }, []);
   return (
-    <div className="service-container container">
+    <div className="service-container mt-8 overflow-hidden container">
       <h1 className="service-title title" id="service-title">
-        <div className="service-letters">S</div>
-        <div className="service-letters">E</div>
-        <div className="service-letters">R</div>
-        <div className="service-letters">V</div>
-        <div className="service-letters">I</div>
-        <div className="service-letters">C</div>
-        <div className="service-letters">E</div>
-        <div className="service-letters">S</div>
+        <div className="inline-block font-normal service-letters">S</div>
+        <div className="inline-block font-normal service-letters">E</div>
+        <div className="inline-block font-normal service-letters">R</div>
+        <div className="inline-block font-normal service-letters">V</div>
+        <div className="inline-block font-normal service-letters">I</div>
+        <div className="inline-block font-normal service-letters">C</div>
+        <div className="inline-block font-normal service-letters">E</div>
+        <div className="inline-block font-normal service-letters">S</div>
       </h1>
-      <div className="service-card-container">
+      <div className="flex flex-wrap justify-between gap-[2vw] box-border">
         {cardData.map((item, index) => (
           <ServiceCard
             key={index}
             text={item.heading}
             src={item.src}
             backSrc={item.backSrc}
-            cls={
-              index % 2
-                ? "right" + ` service-card${index}`
-                : "left" + ` service-card${index}`
-            }
+            location={item.location}
+            cls={`w-5/12 service-card${index}`}
+            // cls={
+            //   index % 2
+            //     ? "w-/12" + `
+            // ${index}`
+            //     : "left" + ` service-card${index}`
+            // }
           />
         ))}
       </div>
@@ -123,29 +128,34 @@ const Services = () => {
   );
 };
 
-const ServiceCard = ({ key, src, backSrc, text, alt, cls }) => {
+const ServiceCard = ({ key, src, backSrc, text, alt, cls, location }) => {
   const thumbRef = useRef(null);
-  // const imgRef = useRef(null);
-  // useEffect(() => {
-  //   const handleMouseMove = (e) => {
-  //     const rect = thumbRef.current.getBoundingClientRect();
-  //     const x = ((e.clientX - rect.left) / rect.width - 0.5) * 12;
-  //     const y = ((e.clientY - rect.top) / rect.height - 0.5) * 12;
+  const imgRef = useRef(null);
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      const rect = thumbRef.current.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width - 0.5) * 12;
+      const y = ((e.clientY - rect.top) / rect.height - 0.5) * 12;
 
-  //     imgRef.current.style.transform = `translate(${-x}px, ${-y}px)`;
-  //   };
+      imgRef.current.style.transform = `translate(${-x}px, ${-y}px)`;
+    };
 
-  //   const thumbElement = thumbRef.current;
-  //   thumbElement.addEventListener("mousemove", handleMouseMove);
+    const thumbElement = thumbRef.current;
+    thumbElement.addEventListener("mousemove", handleMouseMove);
 
-  //   return () => {
-  //     thumbElement.removeEventListener("mousemove", handleMouseMove);
-  //   };
-  // }, []);
+    return () => {
+      thumbElement.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
   return (
-    <div className={`service-card ${cls} relative`} key={key}>
+    <a
+      className={`w-[41vw] overflow-hidden box-border ${cls} relative service-card`}
+      key={key}
+      href={location}
+    >
+      {/* <div> */}
       <div
-        className="service-card-thumb"
+        className="w-full h-[320px] rounded-lg text-center overflow-hidden"
         style={{
           background: `url(${backSrc})`,
           backgroundRepeat: "no-repeat",
@@ -153,15 +163,19 @@ const ServiceCard = ({ key, src, backSrc, text, alt, cls }) => {
         }}
         ref={thumbRef}
       >
-        <ShaderImageEffect width="100%" height="400px" imageSrc={src} />
+        <img
+          className="w-auto h-full my-0 mx-auto transition-transform duration-300 ease-in-out"
+          src={src}
+          alt="Service Images"
+          srcset=""
+          ref={imgRef}
+        />
       </div>
-      <div className="service-card-content">
-        <div className="service-card-title">{text}</div>
+      <div className="pl-4 pt-2">
+        <div className="text-2xl font-medium text-left">{text}</div>
       </div>
-      <div className="rounded-full bg-white absolute hidden top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-        Explore
-      </div>
-    </div>
+      {/* </div> */}
+    </a>
   );
 };
 ServiceCard.propTypes = {
@@ -171,6 +185,7 @@ ServiceCard.propTypes = {
   text: PropTypes.string.isRequired,
   alt: PropTypes.string,
   cls: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
 };
 
 export default Services;

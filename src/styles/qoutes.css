@@ -16,7 +16,6 @@
 }
 
 .about-content {
-  /* background-color: rgba(13, 22, 22, 0.273); */
   width: 50%;
   text-align: center;
 }
@@ -50,11 +49,25 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 240px;
-  height: 360px;
+  width: 250px;
+  height: 410px;
   perspective: 1000px;
 }
-
+.qoute {
+  line-height: 1.1;
+  font-size: 0.9rem;
+}
+.card-img {
+  height: 240px;
+}
+.card-text div:nth-child(1) {
+  margin-top: 5px;
+  height: 10%;
+}
+.card-text div:nth-child(3) {
+  margin-top: 5px;
+  font-size: 14px;
+}
 .card .card-wrapper {
   position: absolute;
   top: 50%;
