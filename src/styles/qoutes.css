@@ -128,3 +128,41 @@
     transform: translate(-50%, -50%);
   }
 }
+
+@media (max-width: 768px) {
+  .card {
+    position: relative;
+    transform: translateX(-50%);
+    margin-bottom: 20px;
+  }
+  .card:last-child {
+    margin-bottom: 0px;
+  }
+  .card .card-wrapper {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translateY(0);
+  }
+
+  @keyframes floating {
+    0% {
+      transform: translate(-50%, -50%);
+    }
+    50% {
+      transform: translate(-50%, -55%);
+    }
+    100% {
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .flip-card-front {
+    display: none;
+  }
+
+  .flip-card-back {
+    backface-visibility: visible;
+    transform: rotateY(0);
+  }
+}

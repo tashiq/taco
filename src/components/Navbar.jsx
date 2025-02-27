@@ -434,8 +434,8 @@ const Navbar = () => {
         aria-labelledby="modal-title"
         aria-describedby="modal-description"
       >
-        <Box className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8/12 bg-black shadow-xl p-6 rounded-2xl flex">
-          <Box className="text-white w-5/12">
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8/12 bg-black shadow-xl p-6 rounded-2xl flex">
+          <div className="text-white w-5/12">
             <h1 className="text-4xl capitalize mb-4">We are here to help!</h1>
             <p className="mb-4">
               Have questions or want to work with us? Our team is here to assist
@@ -456,32 +456,50 @@ const Navbar = () => {
                 <img src="/linkedin.png" />
               </a>
             </div>
-          </Box>
-          <div className="w-6/12 background-no-repeat background-position-center relative z-2">
-            <div className="absolute top-0 right-0 z-10">
-              <form className="contact-form">
+          </div>
+          <div className="w-7/12 background-no-repeat background-position-center relative z-2">
+            <div className="absolute top-0 right-0 z-10 ">
+              <form className="contact-form flex flex-col justify-center items-center ">
                 <div className="input-group">
-                  <label>First Name:</label>
-                  <input type="text" required />
+                  <label className="inline-block w-[150px]">First Name:</label>
+                  <input
+                    className="inline-block w-[200px]"
+                    type="text"
+                    required
+                  />
                 </div>
                 <div className="input-group">
-                  <label>Last Name:</label>
-                  <input type="text" required />
-                </div>
-
-                <div className="input-group">
-                  <label>Email: </label>
-                  <input type="email" required />
-                </div>
-
-                <div className="input-group">
-                  <label>Phone Number: </label>
-                  <input type="tel" required />
+                  <label className="inline-block w-[150px]">Last Name:</label>
+                  <input
+                    className="inline-block w-[200px]"
+                    type="text"
+                    required
+                  />
                 </div>
 
                 <div className="input-group">
-                  <label>Country: </label>
-                  <select required>
+                  <label className="inline-block w-[150px]">Email: </label>
+                  <input
+                    className="inline-block w-[200px]"
+                    type="email"
+                    required
+                  />
+                </div>
+
+                <div className="input-group">
+                  <label className="inline-block w-[150px]">
+                    Phone Number:{" "}
+                  </label>
+                  <input
+                    className="inline-block w-[200px]"
+                    type="tel"
+                    required
+                  />
+                </div>
+
+                <div className="input-group">
+                  <label className="inline-block w-[150px]">Country: </label>
+                  <select required className="inline-block w-[200px]">
                     <option value="">Select Country</option>
                     <option value="afghanistan">Afghanistan</option>
                     <option value="albania">Albania</option>
@@ -625,9 +643,9 @@ const Navbar = () => {
                   </select>
                 </div>
 
-                <div className="input-group">
+                <div className="input-group w-[350px]">
                   <label>What would you like to discuss?</label>
-                  <textarea rows="4" required></textarea>
+                  <textarea rows="4" className="w-[350px]" required></textarea>
                 </div>
 
                 <button type="submit" className="submit-btn">
@@ -640,7 +658,7 @@ const Navbar = () => {
             src="/contact_form_bg.svg"
             className="absolute -top-12 -right-16 -z-1"
           />
-        </Box>
+        </div>
       </Modal>
     </>
   );

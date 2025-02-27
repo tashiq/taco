@@ -2,9 +2,9 @@ import { Link } from "react-router";
 import "../styles/footer.css";
 const Footer = () => {
   return (
-    <footer className="w-full bg-black text-white relative">
-      <div className="flex justify-between  pt-20">
-        <div className="w-3/12 flex flex-col justify-center items-center gap-2">
+    <footer className="w-full bg-black text-white relative min-h-[300px]">
+      <div className="flex justify-between px-6 lg:pl-0 flex-col lg:flex-row pt-6 lg:pt-20">
+        <div className="w-full lg:w-3/12 flex flex-col justify-center items-center gap-2">
           <div>
             <svg
               width="120"
@@ -244,7 +244,7 @@ const Footer = () => {
             </a>
           </div>
         </div>
-        <div className="w-4/12 font-light text-gray-200 text-sm">
+        <div className="pt-4 lg:pt-0 w-9/12 lg:w-4/12 font-light text-gray-200 text-sm">
           <h3 className="text-lg font-normal text-white">Head Office</h3>
           <p>226 Portland,</p>
           <p>MAM Tower, Strand Road</p>
@@ -269,7 +269,7 @@ const Footer = () => {
             1946928928
           </p>
         </div>
-        <div className="w-3/12 font-light text-gray-200 text-sm">
+        <div className="pt-4 lg:pt-0 w-9/12 lg:w-3/12  font-light text-gray-200 text-sm">
           <h3 className="text-lg font-normal text-white">Dhaka Office</h3>
           <p> House #401,</p>
           <p>Road: #6, Baridhara </p>
@@ -287,39 +287,41 @@ const Footer = () => {
             </a>
           </p>
         </div>
-        <div className="w-3/12 font-light text-gray-200 text-sm">
-          <h3 className="text-lg font-normal text-white">Services</h3>
-          <ul className="list-disc list-inside">
-            <li>
-              <a className="hover:underline" href="/services#feederage">
-                Feeder Service
-              </a>
-            </li>
-            <li>
-              <a className="hover:underline" href="/services#oceanline">
-                Shipping Liner Agency
-              </a>
-            </li>
-            <li>
-              <a className="hover:underline" href="/services#freight">
-                Freight Forwarding
-              </a>
-            </li>
-            <li>
-              <a className="hover:underline" href="/services#clear">
-                Customs Clearance & Logistics
-              </a>
-            </li>
-          </ul>
+        <div className="pt-4 lg:pt-0 w-full lg:w-3/12 flex lg:block justify-center items-center font-light text-gray-200 text-sm pb-16 lg:pb-0">
+          <div>
+            <h3 className="text-lg font-normal text-white">Services</h3>
+            <ul className="list-disc list-inside">
+              <li>
+                <a className="hover:underline" href="/services#feederage">
+                  Feeder Service
+                </a>
+              </li>
+              <li>
+                <a className="hover:underline" href="/services#oceanline">
+                  Shipping Liner Agency
+                </a>
+              </li>
+              <li>
+                <a className="hover:underline" href="/services#freight">
+                  Freight Forwarding
+                </a>
+              </li>
+              <li>
+                <a className="hover:underline" href="/services#clear">
+                  Customs Clearance & Logistics
+                </a>
+              </li>
+            </ul>
+          </div>
           <img
             src="/mmg-bottom-logo.png"
             alt="bottom-logo"
             srcset=""
-            className="mt-8"
+            className="mt-0 lg:mt-8"
           />
         </div>
       </div>
-      <div className="text-gray-500 absolute bottom-0 w-full text-center py-2 copy">
+      <div className="text-gray-500 text-sm absolute bottom-0 w-full text-center py-2 copy ">
         Copyright © 2024. MM SEAWAYS LTD. All rights reserved. Designed and
         Developed by MMG.
       </div>

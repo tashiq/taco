@@ -61,6 +61,27 @@
   .prev-btn,
   .next-btn {
     font-size: 18px;
-    padding: 8px 12px;
+    padding: 4px 8px;
+    height: 40px;
+    width: 40px;
+    transform: translateY(-50%);
+    z-index: 1000;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.9s;
+  }
+
+  .prev-btn {
+    left: 0px;
+  }
+
+  .next-btn {
+    right: 0px;
+  }
+
+  .carousel-container {
+    width: 90vw;
+    height: auto;
   }
 }

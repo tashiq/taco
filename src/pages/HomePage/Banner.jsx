@@ -1,7 +1,7 @@
 import "../../styles/index.css";
 const Banner = () => {
   return (
-    <div className="lg:px-6 sm:px-2 pt-4 lg:pt-8 pb-2 lg:pb-8 h-auto">
+    <div className="lg:px-6 px-2 pt-4 lg:pt-8 pb-2 lg:pb-8 h-auto">
       <div className="overflow-hidden relative">
         <video
           className="rounded-md lg:rounded-xl w-full lg:w-[90vw] h-[65vh] object-cover"

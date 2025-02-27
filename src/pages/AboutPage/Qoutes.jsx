@@ -47,75 +47,81 @@ const Qoutes = () => {
     },
   ];
   useEffect(() => {
+    const mm = gsap.matchMedia();
     const cards = cardRef.current;
     const totalScrollHeight = window.innerHeight * 3;
     const position = [10, 30, 50, 70, 90];
     const rotation = [-15, -7.5, 0, 7.5, 15];
-    const ctx = gsap.context(() => {
-      // Your GSAP animation
-      ScrollTrigger.create({
-        trigger: ".cards",
-        start: "top top",
-        end: () => `+=${totalScrollHeight}`,
-        pin: true,
-        pinSpacing: true,
-      });
-      cards.forEach((card, index) => {
-        gsap.to(card, {
-          left: `${position[index]}%`,
-          rotation: `${rotation[index]}`,
-          ease: "none",
-          scrollTrigger: {
-            trigger: ".cards",
-            start: "top top",
-            end: () => `+=${window.innerHeight}`,
-            scrub: 0.5,
-            id: `spread-${index}`,
-          },
-        });
-      });
-
-      cards.forEach((card, index) => {
-        const frontEl = card.querySelector(".flip-card-front");
-        const backEl = card.querySelector(".flip-card-back");
-        const straggerOffset = index * 0.05;
-        const startOffset = 1 / 3 + straggerOffset;
-        const endOffset = 2 / 3 + straggerOffset;
+    mm.add("(min-width:768px)", () => {
+      const ctx = gsap.context(() => {
+        // Your GSAP animation
         ScrollTrigger.create({
           trigger: ".cards",
           start: "top top",
           end: () => `+=${totalScrollHeight}`,
-          scrub: 1,
-          id: `rotate-flip-${index}`,
-          onUpdate: (self) => {
-            const progress = self.progress;
-            if (progress >= startOffset && progress < endOffset) {
-              const animationProgress = (progress - startOffset) / (1 / 3);
-              const frontRotation = -180 * animationProgress;
-              const backRotation = 180 - 180 * animationProgress;
-              const cardRotation = rotation[index] * (1 - animationProgress);
-              gsap.to(frontEl, { rotateY: frontRotation, ease: "power1.out" });
-              gsap.to(backEl, { rotateY: backRotation, ease: "power1.out" });
-              gsap.to(card, {
-                xPercent: -50,
-                yPercent: -50,
-                rotate: cardRotation,
-                ease: "power1.out",
-              });
-            }
-          },
+          pin: true,
+          pinSpacing: true,
         });
-      });
-    }, qouteContainerRef);
+        cards.forEach((card, index) => {
+          gsap.to(card, {
+            left: `${position[index]}%`,
+            rotation: `${rotation[index]}`,
+            ease: "none",
+            scrollTrigger: {
+              trigger: ".cards",
+              start: "top top",
+              end: () => `+=${window.innerHeight}`,
+              scrub: 0.5,
+              id: `spread-${index}`,
+            },
+          });
+        });
 
-    // Cleanup on component unmount
-    return () => ctx.revert();
+        cards.forEach((card, index) => {
+          const frontEl = card.querySelector(".flip-card-front");
+          const backEl = card.querySelector(".flip-card-back");
+          const straggerOffset = index * 0.05;
+          const startOffset = 1 / 3 + straggerOffset;
+          const endOffset = 2 / 3 + straggerOffset;
+          ScrollTrigger.create({
+            trigger: ".cards",
+            start: "top top",
+            end: () => `+=${totalScrollHeight}`,
+            scrub: 1,
+            id: `rotate-flip-${index}`,
+            onUpdate: (self) => {
+              const progress = self.progress;
+              if (progress >= startOffset && progress < endOffset) {
+                const animationProgress = (progress - startOffset) / (1 / 3);
+                const frontRotation = -180 * animationProgress;
+                const backRotation = 180 - 180 * animationProgress;
+                const cardRotation = rotation[index] * (1 - animationProgress);
+                gsap.to(frontEl, {
+                  rotateY: frontRotation,
+                  ease: "power1.out",
+                });
+                gsap.to(backEl, { rotateY: backRotation, ease: "power1.out" });
+                gsap.to(card, {
+                  xPercent: -50,
+                  yPercent: -50,
+                  rotate: cardRotation,
+                  ease: "power1.out",
+                });
+              }
+            },
+          });
+        });
+      }, qouteContainerRef);
+
+      // Cleanup on component unmount
+      return () => ctx.revert();
+    });
   }, []);
   return (
     <>
-      <section className="about-container">
+      <section className="about-container border border-black">
         <div className="qoute-container">
-          <h1 className="text-7xl text-white font-normal ps-12 text-center pt-6">
+          <h1 className="text-3xl lg:text-7xl text-white font-normal  text-center pt-6 mb-12 lg:mb-0">
             Board of Directors
           </h1>
           <div className="qoute-card-container" ref={qouteContainerRef}>

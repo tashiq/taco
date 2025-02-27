@@ -168,18 +168,18 @@ const Venture = () => {
     });
   }, []);
   return (
-    <div className="venture-container  mt-8 overflow-hidden  container">
-      <h1 className="venture-title title" id="venture-title">
+    <div className="venture-container mt-8 overflow-hidden px-4 lg:px-6 box-border">
+      <h1
+        className="venture-title  text-4xl lg:text-[4rem] font-medium uppercase py-4 lg:py-8"
+        id="venture-title"
+      >
         <span className="letters inline-block font-normal">Industry</span>
-        <span
-          className="letters inline-block font-normal"
-          style={{ width: "20px" }}
-        >
+        <span className="letters inline-block font-normal w-[15px] lg:w-[20px]">
           {" "}
         </span>
         <span className="letters inline-block font-normal">Edge</span>
       </h1>
-      <div className="flex flex-wrap justify-between gap-[2vw] box-border">
+      <div className="flex flex-wrap justify-between gap-0 lg:gap-[2vw] box-border">
         {cardData.map((item, index) => (
           <VentureCard
             key={index}
@@ -187,7 +187,7 @@ const Venture = () => {
             text={item.heading}
             subtext={item.subHeading}
             src={item.img}
-            cls={`w-1/2 card${index}`}
+            cls={`card${index}`}
             // cls={
             //   index % 2 ? "right" + ` card${index}` : "left" + ` card${index}`
             // }

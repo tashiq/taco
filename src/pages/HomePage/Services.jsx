@@ -95,8 +95,11 @@ const Services = () => {
     });
   }, []);
   return (
-    <div className="service-container mt-8 overflow-hidden container">
-      <h1 className="service-title title" id="service-title">
+    <div className="service-container mt-8 overflow-hidden px-4 lg:px-6 box-border">
+      <h1
+        className="service-title text-4xl lg:text-[4rem] font-medium uppercase py-4 lg:py-8"
+        id="service-title"
+      >
         <div className="inline-block font-normal service-letters">S</div>
         <div className="inline-block font-normal service-letters">E</div>
         <div className="inline-block font-normal service-letters">R</div>
@@ -106,7 +109,7 @@ const Services = () => {
         <div className="inline-block font-normal service-letters">E</div>
         <div className="inline-block font-normal service-letters">S</div>
       </h1>
-      <div className="flex flex-wrap justify-between gap-[2vw] box-border">
+      <div className="flex flex-wrap justify-between gap-0 lg:gap-[2vw] box-border">
         {cardData.map((item, index) => (
           <ServiceCard
             key={index}
@@ -114,7 +117,7 @@ const Services = () => {
             src={item.src}
             backSrc={item.backSrc}
             location={item.location}
-            cls={`w-5/12 service-card${index}`}
+            cls={`service-card${index}`}
             // cls={
             //   index % 2
             //     ? "w-/12" + `
@@ -149,13 +152,13 @@ const ServiceCard = ({ key, src, backSrc, text, alt, cls, location }) => {
   }, []);
   return (
     <a
-      className={`w-[41vw] overflow-hidden box-border ${cls} relative service-card`}
+      className={`w-[45vw] lg:w-[41vw] overflow-hidden box-border ${cls} relative service-card`}
       key={key}
       href={location}
     >
       {/* <div> */}
       <div
-        className="w-full h-[320px] rounded-lg text-center overflow-hidden"
+        className="w-full h-[118px] lg:h-[320px] rounded-lg text-center overflow-hidden"
         style={{
           background: `url(${backSrc})`,
           backgroundRepeat: "no-repeat",
@@ -171,8 +174,8 @@ const ServiceCard = ({ key, src, backSrc, text, alt, cls, location }) => {
           ref={imgRef}
         />
       </div>
-      <div className="pl-4 pt-2">
-        <div className="text-2xl font-medium text-left">{text}</div>
+      <div className="pl-0 lg:pl-4 pt-2">
+        <div className="text-lg lg:text-2xl font-medium text-left">{text}</div>
       </div>
       {/* </div> */}
     </a>

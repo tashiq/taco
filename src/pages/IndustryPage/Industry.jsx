@@ -104,10 +104,10 @@ const Industry = () => {
 
   return (
     <div>
-      <div className="decode-text-container container mx-auto flex justify-center items-center">
+      <div className="decode-text-container mt-8 overflow-hidden px-4 lg:px-6 box-border mx-auto flex justify-center items-center">
         <div
-          className="decode-text text-7xl uppercase font-medium flex gap-8 justify-center items-center"
-          style={{ height: "calc(100vh - 90px)" }}
+          className="decode-text text-xl lg:text-7xl uppercase font-medium flex gap-4 lg:gap-8 justify-center items-center"
+          style={{ height: "calc(100vh - 70px)" }}
         >
           {"Discover the Legacy of MMG".split(" ").map((word, index) => (
             <div key={index} className="flex">
@@ -121,14 +121,14 @@ const Industry = () => {
         </div>
       </div>
       <div
-        className="bg-black bg-[url('/qoute_bg.png')] bg-no-repeat bg-center bg-fixed text-white"
+        className="bg-black bg-[url('/qoute_bg.png')] bg-no-repeat bg-center bg-contain bg-fixed text-white border border-red"
         id="business-container"
       >
         <div className="h-screen mb-4 font-light text-center flex flex-col justify-center items-center">
-          <h1 className="text-7xl font-medium tracking-wide mb-8  w-9/12">
+          <h1 className="text-xl lg:text-7xl font-medium tracking-wide mb-2 lg:mb-8  w-9/12">
             Leading the Future Across Diverse Sectors
           </h1>
-          <p className="text-xl w-8/12 tracking-wide">
+          <p className="text-md lg:text-xl w-11/12 lg:w-8/12 tracking-wide">
             At MMG, we don’t just participate in industries; we dominate them
             with innovative solutions and unparalleled expertise. Below are the
             industries where we are reshaping standards and setting benchmarks
@@ -138,23 +138,23 @@ const Industry = () => {
         {/* Industry Solutions */}
         <div
           id="industries"
-          className="w-full mb-4 font-light text-center flex justify-center items-center bg-gray-800 bg-opacity-10"
+          className="w-full mb-4 font-light text-center flex flex-col lg:flex-row justify-center items-center bg-gray-800 bg-opacity-10"
         >
-          <div className="w-5/12 h-full p-8  flex justify-start items-center text-left  text-6xl font-normal">
+          <div className="w-full lg:w-5/12 h-full px-4 py-1 lg:p-8  flex justify-start items-center text-left  text-[20px] text-gray-100 lg:text-6xl font-normal">
             Revolutionizing Industrial Operations
           </div>
-          <div className="w-7/12 p-8 h-full text-left  flex flex-col justify-center items-start">
-            <h1 className="text-4xl font-medium tracking-wide mb-8">
+          <div className="w-full lg:w-7/12 px-4 py-1 lg:p-8 h-full text-left  flex flex-col justify-center items-start">
+            <h1 className="text-3xl lg:text-4xl font-medium tracking-wide mb-3 lg:mb-8">
               Industrial Solutions
             </h1>
-            <div className="text-xl tracking-wide">
+            <div className="text-md lg:text-lg tracking-wide">
               MMG’s Industrial Solutions division is transforming the industrial
               landscape with cutting-edge services and robust partnerships.
               Collaborating with Guangzhou Kwanshin IMP. & EXP. Co., Ltd. and
               Leung Bangladesh Ltd., we offer comprehensive solutions tailored
               to large-scale industrial projects.
             </div>
-            <div className="text-lg tracking-wide">
+            <div className="text-md lg:text-lg tracking-wide">
               <div className="font-medium mt-2"> Spare Parts Supply</div>
               <div>
                 Delivering premium spare parts compatible with industry leaders
@@ -181,7 +181,7 @@ const Industry = () => {
 
             {/* <a
               href="/industry"
-              className="uppercase px-3 py-2 bg-orange-500 text-white  font-normal rounded mt-8"
+              className="uppercase px-3 py-1 bg-orange-500 text-white  font-normal rounded mt-8"
             >
               e-brochure
             </a> */}
@@ -191,22 +191,22 @@ const Industry = () => {
         {/* Fisheries */}
         <div
           id="fisheries"
-          className="w-full mb-4 font-light text-center flex justify-center items-center bg-gray-800 bg-opacity-10"
+          className="w-full mb-4 font-light text-center flex flex-col lg:flex-row justify-center items-center bg-gray-800 bg-opacity-10"
         >
-          <div className="w-5/12 h-full p-8  flex justify-start items-center text-left  text-6xl font-normal">
+          <div className="w-full lg:w-5/12 h-full px-4 py-1 lg:p-8  flex justify-start items-center text-left  text-[20px] text-gray-100 lg:text-6xl font-normal">
             Pioneers in Premium Seafood Export{" "}
           </div>
-          <div className="w-7/12 p-8 h-full text-left  flex flex-col justify-center items-start">
-            <h1 className="text-4xl font-medium tracking-wide mb-8">
+          <div className="w-full lg:w-7/12 px-4 py-1 lg:p-8 h-full text-left  flex flex-col justify-center items-start">
+            <h1 className="text-3xl lg:text-4xl font-medium tracking-wide mb-3 lg:mb-8">
               Fisheries
             </h1>
-            <div className="text-xl tracking-wide">
+            <div className="text-md lg:text-lg tracking-wide">
               A proud concern of MMG, our fisheries business leads the way in
               exporting high-quality seafood across the globe. Specializing in
               shrimp, cattle fish, and soul fish, we cater to discerning markets
               with a commitment to freshness and excellence.
             </div>
-            <div className="text-lg tracking-wide">
+            <div className="text-md lg:text-lg tracking-wide">
               <div className="font-medium mt-2">
                 {" "}
                 Global Markets, Unmatched Reach
@@ -254,7 +254,7 @@ const Industry = () => {
 
             {/* <a
               href="/industry"
-              className="uppercase px-3 py-2 bg-orange-500 text-white  font-normal rounded mt-8"
+              className="uppercase px-3 py-1 bg-orange-500 text-white  font-normal rounded mt-8"
             >
               e-brochure
             </a> */}
@@ -263,21 +263,21 @@ const Industry = () => {
         {/* Logistic Services */}
         <div
           id="logistic"
-          className="w-full mb-4 font-light text-center flex justify-center items-center bg-gray-800 bg-opacity-10"
+          className="w-full mb-4 font-light text-center flex flex-col lg:flex-row justify-center items-center bg-gray-800 bg-opacity-10"
         >
-          <div className="w-5/12 h-full p-8  flex justify-start items-center text-left  text-6xl font-normal">
+          <div className="w-full lg:w-5/12 h-full px-4 py-1 lg:p-8  flex justify-start items-center text-left  text-[20px] text-gray-100 lg:text-6xl font-normal">
             Seamless Operations for Global Businesses{" "}
           </div>
-          <div className="w-7/12 p-8 h-full text-left  flex flex-col justify-center items-start">
-            <h1 className="text-4xl font-medium tracking-wide mb-8">
+          <div className="w-full lg:w-7/12 px-4 py-1 lg:p-8 h-full text-left  flex flex-col justify-center items-start">
+            <h1 className="text-3xl lg:text-4xl font-medium tracking-wide mb-3 lg:mb-8">
               Logistics Services
             </h1>
-            <div className="text-lg tracking-wide">
+            <div className="text-md lg:text-lg tracking-wide">
               MMG, through MM Seaways Ltd., delivers world-class logistics
               solutions designed to meet the dynamic needs of businesses
               worldwide.
             </div>
-            <div className="text-lg tracking-wide">
+            <div className="text-md lg:text-lg tracking-wide">
               <div className="font-medium mt-2"> Our Expertise</div>
               <div>
                 <ul className="list-disc pl-8">
@@ -304,7 +304,7 @@ const Industry = () => {
 
             {/* <a
               href="/industry"
-              className="uppercase px-3 py-2 bg-orange-500 text-white  font-normal rounded mt-8"
+              className="uppercase px-3 py-1 bg-orange-500 text-white  font-normal rounded mt-8"
             >
               e-brochure
             </a> */}
@@ -313,20 +313,20 @@ const Industry = () => {
         {/* Automobile Dealership */}
         <div
           id="automobile"
-          className="w-full mb-4 font-light text-center flex justify-center items-center bg-gray-800 bg-opacity-10"
+          className="w-full mb-4 font-light text-center flex flex-col lg:flex-row justify-center items-center bg-gray-800 bg-opacity-10"
         >
-          <div className="w-5/12 h-full p-8  flex justify-start items-center text-left  text-6xl font-normal">
+          <div className="w-full lg:w-5/12 h-full px-4 py-1 lg:p-8  flex justify-start items-center text-left  text-[20px] text-gray-100 lg:text-6xl font-normal">
             Exploring New Horizons in Mobility
           </div>
-          <div className="w-7/12 p-8 h-full text-left  flex flex-col justify-center items-start">
-            <h1 className="text-4xl font-medium tracking-wide mb-8">
+          <div className="w-full lg:w-7/12 px-4 py-1 lg:p-8 h-full text-left  flex flex-col justify-center items-start">
+            <h1 className="text-3xl lg:text-4xl font-medium tracking-wide mb-3 lg:mb-8">
               Automobile Dealership
             </h1>
-            <div className="text-lg tracking-wide">
+            <div className="text-md lg:text-lg tracking-wide">
               MMG is venturing into Bangladesh’s automobile sector, connecting
               global brands with local buyers.
             </div>
-            <div className="text-lg tracking-wide">
+            <div className="text-md lg:text-lg tracking-wide">
               <div className="font-medium mt-2">Key Focus</div>
               <div>
                 We aim to bring reliable vehicles and exceptional service to our
@@ -349,7 +349,7 @@ const Industry = () => {
             </div>
             {/* <a
               href="/industry"
-              className="uppercase px-3 py-2 bg-orange-500 text-white  font-normal rounded mt-8"
+              className="uppercase px-3 py-1 bg-orange-500 text-white  font-normal rounded mt-8"
             >
               e-brochure
             </a> */}
@@ -358,21 +358,21 @@ const Industry = () => {
         {/* Real Estate */}
         <div
           id="real-estate"
-          className="w-full mb-4 font-light text-center flex justify-center items-center bg-gray-800 bg-opacity-10"
+          className="w-full mb-4 font-light text-center flex flex-col lg:flex-row justify-center items-center bg-gray-800 bg-opacity-10"
         >
-          <div className="w-5/12 h-full p-8  flex justify-start items-center text-left  text-6xl font-normal">
+          <div className="w-full lg:w-5/12 h-full px-4 py-1 lg:p-8  flex justify-start items-center text-left  text-[20px] text-gray-100 lg:text-6xl font-normal">
             Redefining Real Estate Excellence{" "}
           </div>
-          <div className="w-7/12 p-8 h-full text-left  flex flex-col justify-center items-start">
-            <h1 className="text-4xl font-medium tracking-wide mb-8">
+          <div className="w-full lg:w-7/12 px-4 py-1 lg:p-8 h-full text-left  flex flex-col justify-center items-start">
+            <h1 className="text-3xl lg:text-4xl font-medium tracking-wide mb-3 lg:mb-8">
               Real Estate
             </h1>
-            <div className="text-lg tracking-wide">
+            <div className="text-md lg:text-lg tracking-wide">
               MMG’s real estate ventures are a testament to innovation, luxury,
               and environmental sustainability, setting new standards in the
               industry.
             </div>
-            <div className="text-lg tracking-wide">
+            <div className="text-md lg:text-lg tracking-wide">
               <div className="font-medium mt-2"> Premier Properties</div>
               <div>
                 Specializing in top-tier residential and commercial properties,
@@ -404,7 +404,7 @@ const Industry = () => {
 
             {/* <a
               href="/industry"
-              className="uppercase px-3 py-2 bg-orange-500 text-white  font-normal rounded mt-8"
+              className="uppercase px-3 py-1 bg-orange-500 text-white  font-normal rounded mt-8"
             >
               e-brochure
             </a> */}
@@ -414,21 +414,21 @@ const Industry = () => {
         {/* Power & Energy */}
         <div
           id="power"
-          className="w-full mb-4 font-light text-center flex justify-center items-center bg-gray-800 bg-opacity-10"
+          className="w-full mb-4 font-light text-center flex flex-col lg:flex-row justify-center items-center bg-gray-800 bg-opacity-10"
         >
-          <div className="w-5/12 h-full p-8  flex justify-start items-center text-left  text-6xl font-normal">
+          <div className="w-full lg:w-5/12 h-full px-4 py-1 lg:p-8  flex justify-start items-center text-left  text-[20px] text-gray-100 lg:text-6xl font-normal">
             Shaping a Sustainable Future{" "}
           </div>
-          <div className="w-7/12 p-8 h-full text-left  flex flex-col justify-center items-start">
-            <h1 className="text-4xl font-medium tracking-wide mb-8">
+          <div className="w-full lg:w-7/12 px-4 py-1 lg:p-8 h-full text-left  flex flex-col justify-center items-start">
+            <h1 className="text-3xl lg:text-4xl font-medium tracking-wide mb-3 lg:mb-8">
               Power & Energy
             </h1>
-            <div className="text-lg tracking-wide">
+            <div className="text-md lg:text-lg tracking-wide">
               MMG is revolutionizing the energy landscape, driving innovation,
               reliability, and sustainability in Bangladesh’s power and energy
               sector.
             </div>
-            <div className="text-lg tracking-wide">
+            <div className="text-md lg:text-lg tracking-wide">
               <div className="font-bold"> Key Industry Player</div>
               <div>
                 We are a trusted leader, delivering groundbreaking solutions
@@ -453,7 +453,7 @@ const Industry = () => {
 
             {/* <a
               href="/industry"
-              className="uppercase px-3 py-2 bg-orange-500 text-white  font-normal rounded mt-8"
+              className="uppercase px-3 py-1 bg-orange-500 text-white  font-normal rounded mt-8"
             >
               e-brochure
             </a> */}
@@ -462,20 +462,20 @@ const Industry = () => {
         {/* Investment */}
         <div
           id="investment"
-          className="w-full mb-4 font-light text-center flex justify-center items-center bg-gray-800 bg-opacity-10"
+          className="w-full mb-4 font-light text-center flex flex-col lg:flex-row justify-center items-center bg-gray-800 bg-opacity-10"
         >
-          <div className="w-5/12 h-full p-8  flex justify-start items-center text-left  text-6xl font-normal">
+          <div className="w-full lg:w-5/12 h-full px-4 py-1 lg:p-8  flex justify-start items-center text-left  text-[20px] text-gray-100 lg:text-6xl font-normal">
             Driving Growth Across Industries{" "}
           </div>
-          <div className="w-7/12 p-8 h-full text-left  flex flex-col justify-center items-start">
-            <h1 className="text-4xl font-medium tracking-wide mb-8">
+          <div className="w-full lg:w-7/12 px-4 py-1 lg:p-8 h-full text-left  flex flex-col justify-center items-start">
+            <h1 className="text-3xl lg:text-4xl font-medium tracking-wide mb-3 lg:mb-8">
               Investment
             </h1>
-            <div className="text-lg tracking-wide">
+            <div className="text-md lg:text-lg tracking-wide">
               At MMG, we specialize in identifying and nurturing transformative
               opportunities that shape the future.
             </div>
-            <div className="text-lg tracking-wide">
+            <div className="text-md lg:text-lg tracking-wide">
               <div className="font-bold">Our Focus</div>
 
               <ul className="list-disc pl-8">
@@ -501,7 +501,7 @@ const Industry = () => {
             </div>
             {/* <a
               href="/industry"
-              className="uppercase px-3 py-2 bg-orange-500 text-white  font-normal rounded mt-8"
+              className="uppercase px-3 py-1 bg-orange-500 text-white  font-normal rounded mt-8"
             >
               e-brochure
             </a> */}
@@ -510,21 +510,21 @@ const Industry = () => {
         {/* Software Solutions */}
         <div
           id="software"
-          className="w-full font-light text-center flex justify-center items-center bg-gray-800 bg-opacity-10"
+          className="w-full font-light text-center flex flex-col lg:flex-row justify-center items-center bg-gray-800 bg-opacity-10"
         >
-          <div className="w-5/12 h-full p-8  flex justify-start items-center text-left  text-6xl font-normal">
+          <div className="w-full lg:w-5/12 h-full px-4 py-1 lg:p-8  flex justify-start items-center text-left  text-[20px] text-gray-100 lg:text-6xl font-normal">
             Driving Innovation for Businesses{" "}
           </div>
-          <div className="w-7/12 p-8 h-full text-left  flex flex-col justify-center items-start">
-            <h1 className="text-4xl font-medium tracking-wide mb-8">
+          <div className="w-full lg:w-7/12 px-4 py-1 lg:p-8 h-full text-left  flex flex-col justify-center items-start">
+            <h1 className="text-3xl lg:text-4xl font-medium tracking-wide mb-3 lg:mb-8">
               Telecommunications & IT{" "}
             </h1>
-            <div className="text-lg tracking-wide">
+            <div className="text-md lg:text-lg tracking-wide">
               MMG harnesses the power of technology to empower businesses with
               customized software solutions that enhance efficiency, streamline
               processes, and foster growth.
             </div>
-            <div className="text-lg tracking-wide">
+            <div className="text-md lg:text-lg tracking-wide">
               <div className="font-bold">Innovative Offerings</div>
               Our services are tailored to meet the unique needs of diverse
               industries, including:
@@ -555,7 +555,7 @@ const Industry = () => {
             </div>
             {/* <a
               href="/industry"
-              className="uppercase px-3 py-2 bg-orange-500 text-white  font-normal rounded mt-8"
+              className="uppercase px-3 py-1 bg-orange-500 text-white  font-normal rounded mt-8"
             >
               e-brochure
             </a> */}

@@ -38,9 +38,9 @@ const ImageCarousel = () => {
   }, [index]);
 
   return (
-    <div className="mt-5 mb-10">
+    <div className="mt-5 mb-5 lg:mb-10">
       <div className="carousel-container relative">
-        <p className="absolute z-20 font-normal text-white text-3xl top-[20px] left-1/2 -translate-x-1/2 bg-[#0000007a] px-2 py-1 rounded-sm">
+        <p className="absolute z-20 font-normal text-white text-sm lg:text-3xl top-[20px] left-1/2 -translate-x-1/2 bg-[#0000007a] px-2 py-1 rounded-sm">
           Explore Our Workspace
         </p>
         <button className="prev-btn" onClick={prevSlide}>

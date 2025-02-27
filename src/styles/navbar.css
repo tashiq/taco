@@ -131,7 +131,6 @@ nav {
     flex-direction: column;
     justify-content: center;
     gap: 5px;
-    width: 40px;
     height: 40px;
     background: transparent;
     border: none;
@@ -161,20 +160,22 @@ nav {
   .nav-items {
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     position: absolute;
     width: 60%;
     z-index: 100;
     top: 10vh;
     right: 2vw;
-    background-color: rgba(226, 214, 214, 0.863);
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 10px 20px;
     box-sizing: border-box;
     border-radius: 12px;
-  }
-  .nav-items {
     transform: translateY(-120%); /* Initially hidden */
     transition: transform 0.3s ease-in-out;
+  }
+  .nav-items a {
+    color: white;
+    border-color: white;
   }
 
   .nav-items.translate {

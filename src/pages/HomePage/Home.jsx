@@ -45,7 +45,7 @@ const Home = () => {
       <Banner />
       {/* <LineDraw /> */}
       <div className="line-container-wrapper">
-        <div className="line-container">
+        <div className="line-container -left-[60px]">
           <svg viewBox="0 0 1542 1683" fill="none" ref={svgRef}>
             <path
               ref={pathRef}

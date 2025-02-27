@@ -1,7 +1,3 @@
-footer {
-  height: 350px;
-}
-
 .copy::after {
   content: "+";
   color: white;

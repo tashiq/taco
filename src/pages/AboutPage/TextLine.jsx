@@ -47,8 +47,8 @@
 import "../../styles/textline.css";
 const TextLine = () => {
   return (
-    <div class="p-4 overflow-hidden whitespace-nowrap">
-      <div class="inline-block animate-marquee text-3xl font-normal agdasima">
+    <div class="p-1 lg:p-4 overflow-hidden whitespace-nowrap">
+      <div class="inline-block animate-marquee text-lg lg:text-3xl font-normal agdasima">
         Telecommunications & IT &nbsp;&nbsp;&nbsp;&nbsp; Logistics Services
         &nbsp;&nbsp;&nbsp;&nbsp; Automobile Dealership &nbsp;&nbsp;&nbsp;&nbsp;
         Real Estate &nbsp;&nbsp;&nbsp;&nbsp; Fisheries &nbsp;&nbsp;&nbsp;&nbsp;

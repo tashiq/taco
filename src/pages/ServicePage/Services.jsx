@@ -69,33 +69,36 @@ import { useEffect } from "react";
 const SingleService = ({ serviceImg, backtext, text, id, desc, rev }) => {
   return (
     <>
-      <div class="p-24 relative -z-10" id={id}>
-        <h2 className="sticky flex justify-center items-center top-[10px] h-[60vh] p-[10px] font-medium mb-[10px] text-[9rem] text-center text-[rgba(2,150,141,0.32)] -z-10">
+      <div class="p-8 lg:p-24 relative -z-10" id={id}>
+        <h2 className="sticky flex justify-center items-center top-[10px] w-full h-[60vh] font-medium mb-[10px] text-[3rem] lg:text-[9rem] text-center text-[rgba(2,150,141,0.32)] -z-10">
           {backtext}
         </h2>
-        <div className="min-h-screen z-10 flex justify-between items-center gap-3">
-          {rev == 0 ? (
-            <>
-              <div className="w-[60%] overflow-hidden">
-                <img className="w-[90%]" src={serviceImg} alt={text} />
-              </div>
-              <div className="w-[40%]">
-                <h1 className="text-[32px] font-medium mb-3">{text}</h1>
-                <div>{desc}</div>
-              </div>
-            </>
-          ) : (
-            <>
-              <div className="w-[60%] overflow-hidden">
-                <h1 className="text-[32px] font-medium mb-3">{text}</h1>
-                <div>{desc}</div>
-              </div>
-              <div className="w-[90%]">
-                <img src={serviceImg} alt="Shiper Liner Agency" />
-              </div>
-            </>
-          )}
-        </div>
+
+        {rev == 0 ? (
+          <div className="h-auto lg:min-h-screen z-10 flex flex-col lg:flex-row justify-between items-center gap-3">
+            <div className="w-full lg:w-[60%] overflow-hidden">
+              <img className="w-[90%]" src={serviceImg} alt={text} />
+            </div>
+            <div className="w-full lg:w-[40%]">
+              <h1 className="text-xl lg:text-[32px] font-medium mb-3">
+                {text}
+              </h1>
+              <div>{desc}</div>
+            </div>
+          </div>
+        ) : (
+          <div className="h-auto lg:min-h-screen z-10 flex flex-col-reverse lg:flex-row justify-between items-center gap-3">
+            <div className="w-full lg:w-[60%] overflow-hidden">
+              <h1 className="text-xl lg:text-[32px] font-medium mb-3">
+                {text}
+              </h1>
+              <div>{desc}</div>
+            </div>
+            <div className="w-[90%]">
+              <img src={serviceImg} alt="Shiper Liner Agency" />
+            </div>
+          </div>
+        )}
       </div>
     </>
   );

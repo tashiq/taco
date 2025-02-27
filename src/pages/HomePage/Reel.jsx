@@ -1,6 +1,5 @@
 import { use, useEffect } from "react";
 import "../../styles/index.css";
-import "../../styles/reel.css";
 import React, { useRef } from "react";
 // import Scene from "./Scene";
 import gsap from "gsap";
@@ -23,14 +22,17 @@ const Reel = () => {
         },
       });
     });
+    return () => mm.revert();
   }, []);
 
   return (
-    <div className="lg:px-6 sm:px-4 pt-2 md:4 lg:pt-8 reel-container mx-auto">
-      <h1 className="text-4xl lg:text-[4rem] font-normal mt-2 lg:mt-4 translate-x-24 ">
+    <div className="lg:px-6 px-4 pt-2 md:4 lg:pt-6 reel-container mx-auto">
+      <h1 className="text-4xl lg:text-[4rem] font-normal lg:font-medium mt-2 lg:mt-4 lg:translate-x-24 lg:mb-6 mb-1">
         Above standards
       </h1>
-      <h1 className="text-4xl lg:text-[4rem] font-normal">Within Reach</h1>
+      <h1 className="text-4xl lg:text-[4rem] font-normal lg:font-medium mb-2">
+        Within Reach
+      </h1>
       <div class="grid grid-cols-12">
         <div class="lg:col-span-6 lg:col-start-7 col-span-12 sm:pt-5">
           –MM SEAWAYS LTD streamlines global trade with expert Non-Vessel
@@ -41,8 +43,8 @@ const Reel = () => {
         </div>
       </div>
 
-      <div className="w-full mt-2 lg:mt-10 h-[70vh]">
-        <div className="w-full lg:w-1/3 h-auto lg:h-[200px] reel-inner">
+      <div className="w-full mt-2 lg:mt-10 lg:h-[70vh]">
+        <div className="w-full lg:w-1/3 h-auto lg:h-[200px] reel-inner overflow-hidden rounded-lg">
           <video
             src="/reel.mp4"
             className="rounded-lg"
