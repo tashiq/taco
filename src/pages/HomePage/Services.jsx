@@ -118,12 +118,6 @@ const Services = () => {
             backSrc={item.backSrc}
             location={item.location}
             cls={`service-card${index}`}
-            // cls={
-            //   index % 2
-            //     ? "w-/12" + `
-            // ${index}`
-            //     : "left" + ` service-card${index}`
-            // }
           />
         ))}
       </div>
@@ -152,7 +146,7 @@ const ServiceCard = ({ key, src, backSrc, text, alt, cls, location }) => {
   }, []);
   return (
     <a
-      className={`w-[45vw] lg:w-[41vw] overflow-hidden box-border ${cls} relative service-card`}
+      className={`w-[45vw] lg:w-[40vw] overflow-hidden box-border ${cls} relative service-card`}
       key={key}
       href={location}
     >
@@ -167,7 +161,7 @@ const ServiceCard = ({ key, src, backSrc, text, alt, cls, location }) => {
         ref={thumbRef}
       >
         <img
-          className="w-auto h-full my-0 mx-auto transition-transform duration-300 ease-in-out"
+          className="w-auto h-full my-0 mx-auto transition-transform duration-300 ease-in-out rounded-lg"
           src={src}
           alt="Service Images"
           srcset=""

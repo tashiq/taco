@@ -59,6 +59,14 @@ const Services = () => {
           />
         ))}
       </div>
+      <div className="relative w-[96vw] h-16">
+        <button
+          className="w-12 h-12 absolute bottom-6 right-10"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        >
+          <img src="/go up.png" alt="" srcset="" />
+        </button>
+      </div>
     </>
   );
 };

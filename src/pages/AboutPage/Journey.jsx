@@ -27,7 +27,7 @@ const Journey = () => {
           demands.
         </p>
       </div>
-      <div className="h-full flex flex-row items-end w-full lg:w-9/12 gap-4 ">
+      <div className="h-full flex flex-row items-end w-full lg:w-9/12 gap-4 mt-8 lg:mt-2">
         {clicked && (
           <button
             className="hidden lg:block translate-y-4"
@@ -42,13 +42,13 @@ const Journey = () => {
               clicked && "hidden"
             }`}
           >
-            <div className="min-w-64  border-l-2 lg:border-l-0 border-white pl-4 lg:pl-0 pb-4">
-              <h1 className="h-3/12 font-medium">2004</h1>
-              <div className="relative my-2 lg:my-8 h-0 border-b-0 lg:border-b-2 border-white">
-                <div className="border-2 border-white w-[30px] h-[30px] rounded-full bg-black -translate-y-1/2 p-[3px] pt-[6px] absolute -left-8 lg:left-2 -rotate-90 lg:rotate-0">
+            <div className="min-w-64  border-l-2 lg:border-l-0 border-white pl-4 ml-4 lg:ml-0 lg:pl-0 pb-4">
+              <h1 className="h-3/12 font-medium p-2">2004</h1>
+              <div className="relative my-0 lg:my-8 h-0 border-b-0 lg:border-b-2 border-white">
+                <div className="w-[35px] h-[35px] bg-black -translate-y-1/2 absolute -top-[22px] lg:top-0 -left-[37px] lg:left-0 -rotate-90 lg:rotate-0">
                   <img
                     src="/down.png"
-                    className="w-[30px] h-[15px]"
+                    className="w-full"
                     onClick={() => {
                       setFourBtn(false);
                       setFour(
@@ -76,13 +76,13 @@ const Journey = () => {
                 </button>
               )}
             </div>
-            <div className="min-w-64  border-l-2 lg:border-l-0 border-white pl-4 lg:pl-0 pb-4">
-              <h1 className="h-3/12 font-medium">2016</h1>
-              <div className="relative my-2 lg:my-8 h-0 border-b-0 lg:border-b-2 border-white">
-                <div className="border-2 border-white w-[30px] h-[30px] rounded-full bg-black -translate-y-1/2 p-[3px] pt-[6px] absolute -left-8 lg:left-2 -rotate-90 lg:rotate-0">
+            <div className="min-w-64  border-l-2 lg:border-l-0 border-white pl-4 ml-4 lg:ml-0 lg:pl-0 pb-4">
+              <h1 className="h-3/12 font-medium p-2">2016</h1>
+              <div className="relative my-0 lg:my-8 h-0 border-b-0 lg:border-b-2 border-white">
+                <div className="w-[35px] h-[35px] bg-black -translate-y-1/2 absolute -top-[22px] lg:top-0 -left-[37px] lg:left-0 -rotate-90 lg:rotate-0">
                   <img
                     src="/down.png"
-                    className="w-[30px] h-[15px]"
+                    className="w-full"
                     onClick={() => {
                       setSixteenBtn(false);
                       setSixteen(
@@ -110,13 +110,13 @@ const Journey = () => {
                 </button>
               )}
             </div>
-            <div className="min-w-64  border-l-2 lg:border-l-0 border-white pl-4 lg:pl-0 pb-4">
-              <h1 className="h-3/12 font-medium">2024</h1>
-              <div className="relative my-2 lg:my-8 h-0 border-b-0 lg:border-b-2 border-white">
-                <div className="border-2 border-white w-[30px] h-[30px] rounded-full bg-black -translate-y-1/2 p-[3px] pt-[6px] absolute -left-8 lg:left-2 -rotate-90 lg:rotate-0">
+            <div className="min-w-64  border-l-2 lg:border-l-0 border-white pl-4 ml-4 lg:ml-0 lg:pl-0 pb-4">
+              <h1 className="h-3/12 font-medium p-2">2024</h1>
+              <div className="relative my-0 lg:my-8 h-0 border-b-0 lg:border-b-2 border-white">
+                <div className="w-[35px] h-[35px] bg-black -translate-y-1/2 absolute -top-[22px] lg:top-0 -left-[37px] lg:left-0 -rotate-90 lg:rotate-0">
                   <img
                     src="/down.png"
-                    className="w-[30px] h-[15px]"
+                    className="w-full"
                     onClick={() => {
                       setTwoFourBtn(false);
                       setTwoFour(

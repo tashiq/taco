@@ -140,13 +140,17 @@ const Industry = () => {
           id="industries"
           className="w-full mb-4 font-light text-center flex flex-col lg:flex-row justify-center items-center bg-gray-800 bg-opacity-10"
         >
-          <div className="w-full lg:w-5/12 h-full px-4 py-1 lg:p-8  flex justify-start items-center text-left  text-[20px] text-gray-100 lg:text-6xl font-normal">
+          <div className="w-5/12 h-full p-8 hidden lg:flex justify-start items-center text-left text-gray-100 text-6xl font-normal">
             Revolutionizing Industrial Operations
           </div>
           <div className="w-full lg:w-7/12 px-4 py-1 lg:p-8 h-full text-left  flex flex-col justify-center items-start">
-            <h1 className="text-3xl lg:text-4xl font-medium tracking-wide mb-3 lg:mb-8">
+            <h1 className="text-3xl font-medium tracking-wide mb-1 lg:mb-8">
               Industrial Solutions
             </h1>
+
+            <div className="w-full lg:w-5/12 h-full pb-2 text-left  text-[20px] text-gray-100 font-normal block lg:hidden">
+              Revolutionizing Industrial Operations
+            </div>
             <div className="text-md lg:text-lg tracking-wide">
               MMG’s Industrial Solutions division is transforming the industrial
               landscape with cutting-edge services and robust partnerships.
@@ -193,13 +197,17 @@ const Industry = () => {
           id="fisheries"
           className="w-full mb-4 font-light text-center flex flex-col lg:flex-row justify-center items-center bg-gray-800 bg-opacity-10"
         >
-          <div className="w-full lg:w-5/12 h-full px-4 py-1 lg:p-8  flex justify-start items-center text-left  text-[20px] text-gray-100 lg:text-6xl font-normal">
+          <div className="w-5/12 h-full p-8 hidden lg:flex justify-start items-center text-left text-gray-100 text-6xl font-normal">
             Pioneers in Premium Seafood Export{" "}
           </div>
           <div className="w-full lg:w-7/12 px-4 py-1 lg:p-8 h-full text-left  flex flex-col justify-center items-start">
-            <h1 className="text-3xl lg:text-4xl font-medium tracking-wide mb-3 lg:mb-8">
+            <h1 className="text-3xl font-medium tracking-wide mb-1 lg:mb-8">
               Fisheries
             </h1>
+
+            <div className="w-full lg:w-5/12 h-full pb-2 text-left  text-[20px] text-gray-100 font-normal block lg:hidden">
+              Pioneers in Premium Seafood Export{" "}
+            </div>
             <div className="text-md lg:text-lg tracking-wide">
               A proud concern of MMG, our fisheries business leads the way in
               exporting high-quality seafood across the globe. Specializing in
@@ -265,13 +273,17 @@ const Industry = () => {
           id="logistic"
           className="w-full mb-4 font-light text-center flex flex-col lg:flex-row justify-center items-center bg-gray-800 bg-opacity-10"
         >
-          <div className="w-full lg:w-5/12 h-full px-4 py-1 lg:p-8  flex justify-start items-center text-left  text-[20px] text-gray-100 lg:text-6xl font-normal">
+          <div className="w-5/12 h-full p-8 hidden lg:flex justify-start items-center text-left text-gray-100 text-6xl font-normal">
             Seamless Operations for Global Businesses{" "}
           </div>
           <div className="w-full lg:w-7/12 px-4 py-1 lg:p-8 h-full text-left  flex flex-col justify-center items-start">
-            <h1 className="text-3xl lg:text-4xl font-medium tracking-wide mb-3 lg:mb-8">
+            <h1 className="text-3xl font-medium tracking-wide mb-1 lg:mb-8">
               Logistics Services
             </h1>
+
+            <div className="w-full lg:w-5/12 h-full pb-2 text-left  text-[20px] text-gray-100 font-normal block lg:hidden">
+              Seamless Operations for Global Businesses{" "}
+            </div>
             <div className="text-md lg:text-lg tracking-wide">
               MMG, through MM Seaways Ltd., delivers world-class logistics
               solutions designed to meet the dynamic needs of businesses
@@ -315,13 +327,17 @@ const Industry = () => {
           id="automobile"
           className="w-full mb-4 font-light text-center flex flex-col lg:flex-row justify-center items-center bg-gray-800 bg-opacity-10"
         >
-          <div className="w-full lg:w-5/12 h-full px-4 py-1 lg:p-8  flex justify-start items-center text-left  text-[20px] text-gray-100 lg:text-6xl font-normal">
+          <div className="w-5/12 h-full p-8 hidden lg:flex justify-start items-center text-left text-gray-100 text-6xl font-normal">
             Exploring New Horizons in Mobility
           </div>
           <div className="w-full lg:w-7/12 px-4 py-1 lg:p-8 h-full text-left  flex flex-col justify-center items-start">
-            <h1 className="text-3xl lg:text-4xl font-medium tracking-wide mb-3 lg:mb-8">
+            <h1 className="text-3xl font-medium tracking-wide mb-1 lg:mb-8">
               Automobile Dealership
             </h1>
+
+            <div className="w-full lg:w-5/12 h-full pb-2 text-left  text-[20px] text-gray-100 font-normal block lg:hidden">
+              Exploring New Horizons in Mobility
+            </div>
             <div className="text-md lg:text-lg tracking-wide">
               MMG is venturing into Bangladesh’s automobile sector, connecting
               global brands with local buyers.
@@ -360,13 +376,17 @@ const Industry = () => {
           id="real-estate"
           className="w-full mb-4 font-light text-center flex flex-col lg:flex-row justify-center items-center bg-gray-800 bg-opacity-10"
         >
-          <div className="w-full lg:w-5/12 h-full px-4 py-1 lg:p-8  flex justify-start items-center text-left  text-[20px] text-gray-100 lg:text-6xl font-normal">
+          <div className="w-5/12 h-full p-8 hidden lg:flex justify-start items-center text-left text-gray-100 text-6xl font-normal">
             Redefining Real Estate Excellence{" "}
           </div>
           <div className="w-full lg:w-7/12 px-4 py-1 lg:p-8 h-full text-left  flex flex-col justify-center items-start">
-            <h1 className="text-3xl lg:text-4xl font-medium tracking-wide mb-3 lg:mb-8">
+            <h1 className="text-3xl font-medium tracking-wide mb-1 lg:mb-8">
               Real Estate
             </h1>
+
+            <div className="w-full lg:w-5/12 h-full pb-2 text-left  text-[20px] text-gray-100 font-normal block lg:hidden">
+              Redefining Real Estate Excellence{" "}
+            </div>
             <div className="text-md lg:text-lg tracking-wide">
               MMG’s real estate ventures are a testament to innovation, luxury,
               and environmental sustainability, setting new standards in the
@@ -416,13 +436,17 @@ const Industry = () => {
           id="power"
           className="w-full mb-4 font-light text-center flex flex-col lg:flex-row justify-center items-center bg-gray-800 bg-opacity-10"
         >
-          <div className="w-full lg:w-5/12 h-full px-4 py-1 lg:p-8  flex justify-start items-center text-left  text-[20px] text-gray-100 lg:text-6xl font-normal">
+          <div className="w-5/12 h-full p-8 hidden lg:flex justify-start items-center text-left text-gray-100 text-6xl font-normal">
             Shaping a Sustainable Future{" "}
           </div>
           <div className="w-full lg:w-7/12 px-4 py-1 lg:p-8 h-full text-left  flex flex-col justify-center items-start">
-            <h1 className="text-3xl lg:text-4xl font-medium tracking-wide mb-3 lg:mb-8">
+            <h1 className="text-3xl font-medium tracking-wide mb-1 lg:mb-8">
               Power & Energy
             </h1>
+
+            <div className="w-full lg:w-5/12 h-full pb-2 text-left  text-[20px] text-gray-100 font-normal block lg:hidden">
+              Shaping a Sustainable Future{" "}
+            </div>
             <div className="text-md lg:text-lg tracking-wide">
               MMG is revolutionizing the energy landscape, driving innovation,
               reliability, and sustainability in Bangladesh’s power and energy
@@ -464,13 +488,17 @@ const Industry = () => {
           id="investment"
           className="w-full mb-4 font-light text-center flex flex-col lg:flex-row justify-center items-center bg-gray-800 bg-opacity-10"
         >
-          <div className="w-full lg:w-5/12 h-full px-4 py-1 lg:p-8  flex justify-start items-center text-left  text-[20px] text-gray-100 lg:text-6xl font-normal">
+          <div className="w-5/12 h-full p-8 hidden lg:flex justify-start items-center text-left text-gray-100 text-6xl font-normal">
             Driving Growth Across Industries{" "}
           </div>
           <div className="w-full lg:w-7/12 px-4 py-1 lg:p-8 h-full text-left  flex flex-col justify-center items-start">
-            <h1 className="text-3xl lg:text-4xl font-medium tracking-wide mb-3 lg:mb-8">
+            <h1 className="text-3xl font-medium tracking-wide mb-1 lg:mb-8">
               Investment
             </h1>
+
+            <div className="w-full lg:w-5/12 h-full pb-2 text-left  text-[20px] text-gray-100 font-normal block lg:hidden">
+              Driving Growth Across Industries{" "}
+            </div>
             <div className="text-md lg:text-lg tracking-wide">
               At MMG, we specialize in identifying and nurturing transformative
               opportunities that shape the future.
@@ -512,13 +540,17 @@ const Industry = () => {
           id="software"
           className="w-full font-light text-center flex flex-col lg:flex-row justify-center items-center bg-gray-800 bg-opacity-10"
         >
-          <div className="w-full lg:w-5/12 h-full px-4 py-1 lg:p-8  flex justify-start items-center text-left  text-[20px] text-gray-100 lg:text-6xl font-normal">
+          <div className="w-5/12 h-full p-8 hidden lg:flex justify-start items-center text-left text-gray-100 text-6xl font-normal">
             Driving Innovation for Businesses{" "}
           </div>
           <div className="w-full lg:w-7/12 px-4 py-1 lg:p-8 h-full text-left  flex flex-col justify-center items-start">
-            <h1 className="text-3xl lg:text-4xl font-medium tracking-wide mb-3 lg:mb-8">
+            <h1 className="text-3xl font-medium tracking-wide mb-1 lg:mb-8">
               Telecommunications & IT{" "}
             </h1>
+
+            <div className="w-full lg:w-5/12 h-full pb-2 text-left  text-[20px] text-gray-100 font-normal block lg:hidden">
+              Driving Innovation for Businesses{" "}
+            </div>
             <div className="text-md lg:text-lg tracking-wide">
               MMG harnesses the power of technology to empower businesses with
               customized software solutions that enhance efficiency, streamline
@@ -561,6 +593,14 @@ const Industry = () => {
             </a> */}
           </div>
         </div>
+      </div>
+      <div className="relative w-[96vw] h-16 mt-4">
+        <button
+          className="w-12 h-12 absolute bottom-6 right-10"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        >
+          <img src="/go up.png" alt="" srcset="" />
+        </button>
       </div>
     </div>
   );

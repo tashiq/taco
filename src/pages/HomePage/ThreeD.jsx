@@ -4,9 +4,9 @@ import { Suspense } from "react";
 import BannerShipModel from "./BannerShipModel";
 const Banner = () => {
   return (
-    <div className="w-full lg:h-screen overflow-hidden relative  mt-8 px-4 lg:px-6 box-border">
+    <div className="w-full lg:min-h-screen overflow-hidden relative  mt-8 px-4 lg:px-6 box-border">
       <div className="w-full">
-        <div className="text-4xl lg:text-7xl font-normal w-full lg:w-1/2">
+        <div className="text-4xl lg:text-7xl font-normal w-full lg:w-7/12">
           Connecting Global Visions to Crafted Shipping Solutions
         </div>
       </div>
@@ -16,7 +16,7 @@ const Banner = () => {
             <Suspense fallback={null}>
               <OrbitControls enableZoom={false} />
               <PerspectiveCamera makeDefault position={[-10, 10, -10]} />
-              <BannerShipModel scale={1} />
+              <BannerShipModel scale={2} />
               <ambientLight intensity={0.7} />
               <directionalLight position={[2, 5, 2]} />
             </Suspense>

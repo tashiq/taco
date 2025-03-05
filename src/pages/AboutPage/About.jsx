@@ -37,8 +37,6 @@ const About = () => {
       <div className="relative w-full">
         <div className="absolute top-32 right-0 -z-100">
           <svg
-            width="428"
-            height="608"
             viewBox="0 0 428 608"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -67,6 +65,14 @@ const About = () => {
       </div>
       <Journey />
       <Gratitude />
+      <div className="relative w-[96vw] h-16">
+        <button
+          className="w-12 h-12 absolute bottom-6 right-10"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        >
+          <img src="/go up.png" alt="" srcset="" />
+        </button>
+      </div>
     </div>
   );
 };

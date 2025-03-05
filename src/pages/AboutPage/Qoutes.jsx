@@ -42,7 +42,7 @@ const Qoutes = () => {
     {
       name: "Shahriar Rahman",
       designation: "CTO",
-      avatar: "/inan.png",
+      avatar: "/inan.jpg",
       qoute: "JUST A TECH GUY.",
     },
   ];

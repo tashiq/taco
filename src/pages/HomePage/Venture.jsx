@@ -188,9 +188,6 @@ const Venture = () => {
             subtext={item.subHeading}
             src={item.img}
             cls={`card${index}`}
-            // cls={
-            //   index % 2 ? "right" + ` card${index}` : "left" + ` card${index}`
-            // }
           />
         ))}
       </div>

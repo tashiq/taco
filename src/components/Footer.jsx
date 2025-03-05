@@ -234,13 +234,13 @@ const Footer = () => {
               href="https://www.linkedin.com/company/mmseaways/"
               target="_blank"
             >
-              <img src="/fb.png" />
+              <img src="/fb.png" width={30} />
             </a>
             <a
               href="https://www.linkedin.com/company/mmseaways/"
               target="_blank"
             >
-              <img src="/linkedin.png" />
+              <img src="/linkedin.png" width={30} />
             </a>
           </div>
         </div>
@@ -321,9 +321,11 @@ const Footer = () => {
           />
         </div>
       </div>
-      <div className="text-gray-500 text-sm absolute bottom-0 w-full text-center py-2 copy ">
-        Copyright © 2024. MM SEAWAYS LTD. All rights reserved. Designed and
-        Developed by MMG.
+      <div className="h-fit pt-16">
+        <div className="text-gray-500 text-sm absolute bottom-0 w-full text-center py-2 copy">
+          Copyright © 2024. MM SEAWAYS LTD. All rights reserved. Designed and
+          Developed by MMG.
+        </div>
       </div>
     </footer>
   );

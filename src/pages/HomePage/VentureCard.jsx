@@ -7,15 +7,15 @@ const VentureCard = ({ key, src, text, subtext, cls, location }) => {
   const targetText = text;
   return (
     <a
-      className={`w-[45vw] lg:w-[41vw]  overflow-hidden box-border ${cls} relative`}
+      className={`w-[45vw] lg:w-[40vw]  overflow-hidden box-border ${cls} relative`}
       key={key}
       href={`/industry#${location}`}
     >
-      <div>
+      <div className="w-full">
         <div className="w-full h-[118px] lg:h-[320px] rounded-lg text-center overflow-hidden">
           <img
             src={src}
-            className="h-full text-4xl lg:text-[4rem] font-medium uppercase"
+            className="h-full text-4xl lg:text-[4rem] font-medium uppercase rounded-lg"
             alt="Venture Image"
             srcset=""
           />
